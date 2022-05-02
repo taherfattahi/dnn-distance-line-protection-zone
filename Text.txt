@@ -1,0 +1,1 @@
+accuracy deep neural network:  0.9815950920245399
