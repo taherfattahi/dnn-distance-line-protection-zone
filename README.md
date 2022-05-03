@@ -1,6 +1,8 @@
 # Machine Learning Distance Line Protection Zone
 
-Implementing Machine Learning Multi-class Classification Algorithms for Distance Line Protection Zone with Deep Neural Network and Random Forest
+Implementing Machine Learning Multi-class Classification Algorithms for obtaining the Micom P543 distance relay protection curve in transmission lines with Deep Neural Network and Random Forest
+
+For gathering data requirements, first the distance function test of Micom P543 relay was performed with Vebko AMT105 relay tester and the results were given as input to the Deep Neural Network and Random Forest to get the characteristic distance curve
 
 ## Features
   - Using <b>Tensorflow</b> to build a Multi Classification Algorithm with Deep Neural Network model
