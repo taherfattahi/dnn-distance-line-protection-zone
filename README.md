@@ -17,6 +17,37 @@ For gathering data requirements, first the distance function of Micom P543 relay
   
 ## Installation
 
+#### First you need install TensorFlow for C
+
+1) Install bazel
+```bash
+curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+sudo apt update && sudo apt install bazel
+sudo apt install openjdk-11-jdk
+```
+
+2) Build tensorflowlite c lib from source
+```bash
+d ~/workspace
+git clone https://github.com/tensorflow/tensorflow.git && cd tensorflow
+./configure
+bazel build --config opt --config monolithic --define tflite_with_xnnpack=false //tensorflow/lite:libtensorflowlite.so
+bazel build --config opt --config monolithic --define tflite_with_xnnpack=false //tensorflow/lite/c:libtensorflowlite_c.so
+
+# Check status
+file bazel-bin/tensorflow/lite/c/libtensorflowlite_c.so
+# ELF 64-bit LSB shared object, x86-64
+```
+
+3) Build go-tflite
+```bash
+export CGO_LDFLAGS=-L$HOME/workspace/tensorflow/bazel-bin/tensorflow/lite/c
+export CGO_CFLAGS=-I$HOME/workspace/tensorflow/
+```
+
+## Build
+
 For Linux/MacOs amd64:
 
 ```bash
