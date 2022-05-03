@@ -9,7 +9,7 @@ For gathering data requirements, first the distance function of Micom P543 relay
   - Using <b>Scikit-Learn</b> to build a a Multi Classification Algorithm with Random Forest
   - Deep Neural Network Accuracy = 98% 
   - Random Forest Accuracy = 96%
-  - Using <a href="https://www.se.com/uk/en/product-range/60747-micom-p54x/#overview" target="_blank"><b>Schneider Electric Micom P543 Relay</b></a> testing by <a href="https://vebko.org/en/Default.aspx" target="_blank"><b>Vebko AMT105</b></a> device for create dataset
+  - Using <a href="https://www.se.com/uk/en/product-range/60747-micom-p54x/#overview" target="_blank"><b>Schneider Electric Micom P543 Relay</b></a> testing by <a href="https://vebko.org/en/Default.aspx" target="_blank"><b>Vebko AMT105</b></a> relay tester for create dataset
   - Converting the <b>Tensorflow</b> model to tflite for running on Embedded Board ARM Architecture
   - Using <b>Golang</b> TFLite to be able to easily run tflite model
   - Running on <a href="https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html" target="_blank"><b>Xilinx Zynq-7020</b></a> Embedded Board
