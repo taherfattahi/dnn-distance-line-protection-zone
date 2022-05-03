@@ -1,0 +1,96 @@
+# Machine Learning Distance Line Protection Zone
+
+Implementing Multi Classification Algorithms for Distance Line Protection Zone with Deep Neural Network and Random Forest
+
+## Features
+  - Using <b>Tensorflow</b> to build a Multi Classification Algorithm with Deep Neural Network model
+  - Using <b>Scikit-Learn</b> to build a a Multi Classification Algorithm with Random Forest
+  - Deep Neural Network Accuracy = 98% 
+  - Random Forest Accuracy = 96%
+  - Using <a href="https://www.se.com/uk/en/product-range/60747-micom-p54x/#overview" target="_blank"><b>Schneider Electric Micom P543 Relay</b></a> testing by <a href="https://vebko.org/en/Default.aspx" target="_blank"><b>Vebko AMT105</b></a> device for create dataset
+  - Converting the <b>Tensorflow</b> model to tflite for running on Embedded Board ARM Architecture
+  - Using <b>Golang</b> TFLite to be able to easily run tflite model
+  - Running on <a href="https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html" target="_blank"><b>Xilinx Zynq-7020</b></a> Embedded Board
+  - Usable via <b>Docker</b> file
+  
+## Installation
+
+For Linux/MacOs amd64:
+
+```bash
+  go build main.go
+```
+
+For xilinx Zynq-7020 (ARM-based computers):
+
+```bash
+  sudo apt-get install gcc-arm-linux-gnueabihf
+  
+  CGO_ENABLED=1 GOOS=linux GOARCH=arm CC=arm-linux-gnueabihf-gcc go build -o main
+```
+
+## Running
+
+This running for ubuntu/MacOs amd64:
+
+```bash
+  ./main
+```
+
+This running for xilinx Zynq-7020 (ARM-based computers):
+
+```bash
+  export LD_LIBRARY_PATH=./arm
+  
+  ./main
+```
+
+## Running with Docker
+
+First of all, clone and the repo then run
+```bash
+  docker build -t dnn .
+```
+
+After pulling and building the image, You can get the result like this
+
+```bash
+  docker run --rm -t amr ./main
+```
+
+Or you can go to the container for running it manually like this
+
+```bash
+  docker run -it amr
+```
+
+## More Info
+
+#### Micom P543 Relay testing by vebko AMT105
+![Graph](https://github.com/taherfattahi/dnn-distance-line-protection-zone/blob/master/images/micom_p543_relay_testing_by_vebko.jpg)
+
+#### Distance Line Protection Zone in the AMPro software
+![Graph](https://github.com/taherfattahi/dnn-distance-line-protection-zone/blob/master/images/distance_line_protection_zone.png)
+
+#### Graph of the Deep Neural Network
+![Graph](https://github.com/taherfattahi/dnn-distance-line-protection-zone/blob/master/images/graph.png)
+
+#### Model Accuracy Plot
+![Graph](https://github.com/taherfattahi/dnn-distance-line-protection-zone/blob/master/images/model_accuracy.png)
+
+#### Model Loss Plot
+![Graph](https://github.com/taherfattahi/dnn-distance-line-protection-zone/blob/master/images/model_loss.png)
+
+
+## Note:
+ If you had issue and got `standard_init_linux.go:211: exec user process caused "exec format error` error, try [this solution](https://www.stereolabs.com/docs/docker/building-arm-container-on-x86/).
+
+## Collaborators
+
+- [Nima Akbarzade](https://www.github.com/iw4p) - Mohsen Shahsavari
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
