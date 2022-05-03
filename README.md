@@ -1,6 +1,6 @@
 # Machine Learning Distance Line Protection Zone
 
-Implementing Machine Learning Multi Classification Algorithms for Distance Line Protection Zone with Deep Neural Network and Random Forest
+Implementing Machine Learning Multi-class Classification Algorithms for Distance Line Protection Zone with Deep Neural Network and Random Forest
 
 ## Features
   - Using <b>Tensorflow</b> to build a Multi Classification Algorithm with Deep Neural Network model
