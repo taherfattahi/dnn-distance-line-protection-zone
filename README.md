@@ -124,7 +124,7 @@ Or you can go to the container for running it manually like this
 
 ## Collaborators
 
-- [Nima Akbarzade](https://www.github.com/iw4p) - [Mohsen Shahsavari](https://github.com/mohsenshahsavari)
+- [Nima Akbarzade](https://www.github.com/iw4p) - [Mohsen Shahsavari](https://github.com/mohsenshahsavari) - Dr.Aliakbar Nazari
 
 
 ## License
