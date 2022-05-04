@@ -92,13 +92,13 @@ First of all, clone and the repo then run
 After pulling and building the image, You can get the result like this
 
 ```bash
-  docker run --rm -t amr ./main
+  docker run --rm -t distance ./main
 ```
 
 Or you can go to the container for running it manually like this
 
 ```bash
-  docker run -it amr
+  docker run -it distance
 ```
 
 ## More Info
