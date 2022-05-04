@@ -1,15 +1,15 @@
 # Machine Learning Distance Line Protection Zone
 
-Implementing Machine Learning Multi-class Classification Algorithms for obtaining the Micom P543 distance relay protection curve in transmission lines with Deep Neural Network and Random Forest
+Implementing Machine Learning Multi-class Classification Algorithms for obtaining the Micom P543 distance relay protection curve in transmission lines with Deep Neural Network and Random Forest.
 
-For gathering data requirements, first the distance function of Micom P543 relay was tested with Vebko AMT105 relay tester and the results were given as input to the Deep Neural Network and Random Forest to get the characteristic distance curve
+For gathering data requirements, first, the distance function of Micom P543 relay was tested with Vebko AMT105 relay tester and the results were given as input to the Deep Neural Network and Random Forest to get the characteristic distance curve.
 
 ## Features
-  - Using <b>Tensorflow</b> to build a Multi Classification Algorithm with Deep Neural Network model
-  - Using <b>Scikit-Learn</b> to build a a Multi Classification Algorithm with Random Forest
+  - Using <b>Tensorflow</b> to build a Multi Classification Algorithm with a Deep Neural Network model
+  - Using <b>Scikit-Learn</b> to build a Multi Classification Algorithm with Random Forest
   - Deep Neural Network Accuracy = 98% 
   - Random Forest Accuracy = 96%
-  - Using <a href="https://www.se.com/uk/en/product-range/60747-micom-p54x/#overview" target="_blank"><b>Schneider Electric Micom P543 Relay</b></a> testing by <a href="https://vebko.org/en/Default.aspx" target="_blank"><b>Vebko AMT105</b></a> relay tester for create dataset
+  - Using <a href="https://www.se.com/uk/en/product-range/60747-micom-p54x/#overview" target="_blank"><b>Schneider Electric Micom P543 Relay</b></a> testing by <a href="https://vebko.org/en/Default.aspx" target="_blank"><b>Vebko AMT105</b></a> relay tester to creating the dataset
   - Converting the <b>Tensorflow</b> model to tflite for running on Embedded Board ARM Architecture
   - Using <b>Golang</b> TFLite to be able to easily run tflite model
   - Running on <a href="https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html" target="_blank"><b>Xilinx Zynq-7020</b></a> Embedded Board
