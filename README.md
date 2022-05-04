@@ -51,6 +51,8 @@ export CGO_CFLAGS=-I$HOME/workspace/tensorflow/
 For Linux/MacOs amd64:
 
 ```bash
+  export CGO_LDFLAGS=-L$HOME/workspace/tensorflow/bazel-bin/tensorflow/lite/c
+
   go build main.go
 ```
 
@@ -58,6 +60,8 @@ For xilinx Zynq-7020 (ARM-based computers):
 
 ```bash
   sudo apt-get install gcc-arm-linux-gnueabihf
+
+  export CGO_LDFLAGS=-L$HOME/workspace/tensorflow/bazel-bin/tensorflow/lite/c
   
   CGO_ENABLED=1 GOOS=linux GOARCH=arm CC=arm-linux-gnueabihf-gcc go build -o main
 ```
