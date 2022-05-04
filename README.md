@@ -29,7 +29,7 @@ sudo apt install openjdk-11-jdk
 
 2) Build tensorflowlite c lib from source
 ```bash
-d ~/workspace
+cd ~/workspace
 git clone https://github.com/tensorflow/tensorflow.git && cd tensorflow
 ./configure
 bazel build --config opt --config monolithic --define tflite_with_xnnpack=false //tensorflow/lite:libtensorflowlite.so
